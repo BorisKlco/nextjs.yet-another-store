@@ -1,3 +1,4 @@
+import { Navbar } from "@/components";
 import "./globals.css";
 import { Manrope } from "next/font/google";
 
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fontManrope.variable}>{children}</body>
+      <body className={fontManrope.variable}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
