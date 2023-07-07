@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
-import fetchProduct from "./fetchProduct";
+import Product from "./Product";
 
-export { Navbar, fetchProduct };
+export { Navbar, Product };
