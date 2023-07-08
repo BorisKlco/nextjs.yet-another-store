@@ -20,7 +20,7 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
                   height={512}
                   width={512}
                   alt="img"
-                  className="rounded-md"
+                  className="rounded-md border border-gray-100"
                 />
               </Tab.Panel>
             ))}
@@ -35,7 +35,7 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
                     width={158}
                     alt={img}
                     className={`rounded-md border m-2 transition duration-100 hover:scale-[1.03] hover:contrast-[1.05] ${
-                      selected ? "border-2 border-gray-300 drop-shadow-md" : ""
+                      selected ? "border-2 border-gray-300 drop-shadow-sm" : ""
                     }`}
                   />
                 )}
