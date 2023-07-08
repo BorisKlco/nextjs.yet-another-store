@@ -4,7 +4,7 @@ import { BsBag, BsPerson } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <header className="flex 2xl:px-[24rem] lg:px-16 px-6 py-3 bg-white justify-between items-center border-b  min-w-max">
+    <header className="flex 2xl:px-[24rem] lg:px-16 px-6 py-3 bg-white justify-between items-center border-b">
       <Link href="/">
         <Image
           className="object-contain transition duration-100 hover:scale-[1.03]"
@@ -39,4 +39,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
