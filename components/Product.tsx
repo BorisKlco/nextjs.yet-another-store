@@ -6,7 +6,7 @@ import { Fragment } from "react";
 
 const Product = ({ name, desc, price, files }: ProductProps) => {
   return (
-    <div className="grid grid-cols-1 min-w-[26rem] lg:grid-cols-2 lg:w-[64rem] mx-auto mb-4 outline outline-black">
+    <div className="grid grid-cols-1 w-full lg:grid-cols-2 max-w-[64rem] mx-auto mb-4 outline outline-black bg-white">
       <Tab.Group>
         <div className="">
           <Tab.Panels className="flex justify-center">

@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fontManrope.variable}`}>
+      <body
+        className={`${fontManrope.variable} bg-gradient-to-tl from-slate-100 via-white to-slate-200`}
+      >
         <Navbar />
         {children}
       </body>
