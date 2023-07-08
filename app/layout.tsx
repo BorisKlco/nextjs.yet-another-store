@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black ${fontManrope.variable}`}>
+      <body className={`w-full ${fontManrope.variable}`}>
         <Navbar />
         {children}
       </body>

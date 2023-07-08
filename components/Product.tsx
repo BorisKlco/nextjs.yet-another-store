@@ -6,35 +6,33 @@ import { Fragment } from "react";
 
 const Product = ({ name, desc, price, files }: ProductProps) => {
   return (
-    <div className="flex flex-col justify-center w-[64rem]">
+    <div className="grid grid-cols-1 w-4/5 min-w-[26rem] lg:grid-cols-2 lg:w-[64rem] mx-auto outline outline-black">
       <Tab.Group>
-        <h1>{name}</h1>
-        <p>{desc}</p>
-        <p>{price}</p>
-        <div className="">
+        <div className="w-full">
           <Tab.Panels className="flex justify-center">
             {files.images.map((img) => (
-              <Tab.Panel key={img} className="drop-shadow-sm m-2">
+              <Tab.Panel key={img} className="drop-shadow-sm m-2 w-full">
                 <Image
                   src={`/images/${img}`}
-                  height={512}
-                  width={512}
+                  height={1024}
+                  width={1024}
                   alt="img"
-                  className="rounded-md border border-gray-100"
+                  className="rounded border border-gray-100"
                 />
               </Tab.Panel>
             ))}
           </Tab.Panels>
-          <Tab.List className="flex justify-center">
+          <Tab.List className="flex justify-center mx-auto relative w-full">
             {files.images.map((img, index) => (
               <Tab key={index} as={Fragment}>
                 {({ selected }) => (
                   <Image
                     src={`/images/${img}`}
-                    height={158}
-                    width={158}
+                    objectFit="responsive"
+                    height={128}
+                    width={128}
                     alt={img}
-                    className={`cursor-pointer rounded-md border border-gray-200 m-2 transition duration-100 hover:scale-[1.03] hover:contrast-[1.05] ${
+                    className={`cursor-pointer w-full rounded border border-gray-200 m-2 transition duration-100 hover:scale-[1.03] hover:contrast-[1.05] ${
                       selected
                         ? "drop-shadow-md outline-none border-2 border-black"
                         : ""
@@ -44,6 +42,22 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
               </Tab>
             ))}
           </Tab.List>
+        </div>
+        <div className="m-2 px-4 flex flex-col justify-between">
+          <div>
+            <h1 className="text-4xl">{name}</h1>
+            <p className="pt-6 text-xl">{desc}</p>
+            <p className="pt-8 text-6xl text-purple-300">{price}</p>
+          </div>
+          <div>
+            <button
+              className="w-full py-4 font-bold text-xl border-none bg-blue-300 rounded text-white
+            transition duration-300 hover:bg-blue-400 hover:scale-[1.01] hover:drop-shadow-sm
+            "
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </Tab.Group>
     </div>
