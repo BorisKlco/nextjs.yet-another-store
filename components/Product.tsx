@@ -34,8 +34,10 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
                     height={158}
                     width={158}
                     alt={img}
-                    className={`rounded-md border m-2 transition duration-100 hover:scale-[1.03] hover:contrast-[1.05] ${
-                      selected ? "border-2 border-gray-300 drop-shadow-sm" : ""
+                    className={`cursor-pointer rounded-md border border-gray-200 m-2 transition duration-100 hover:scale-[1.03] hover:contrast-[1.05] ${
+                      selected
+                        ? "drop-shadow-md outline-none border-2 border-black"
+                        : ""
                     }`}
                   />
                 )}
