@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { Navbar } from "@/app/(components)";
 import "./globals.css";
 import { Manrope } from "next/font/google";
 

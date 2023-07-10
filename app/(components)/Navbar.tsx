@@ -5,12 +5,12 @@ import { BsBag, BsPerson } from "react-icons/bs";
 const Navbar = () => {
   return (
     <header className="flex px-6 py-3 justify-between items-center border drop-shadow-sm">
-      <Link href="/">
+      <Link href="/" className="">
         <Image
-          className="object-contain transition duration-100 hover:scale-[1.03]"
+          className="transition duration-100 hover:scale-[1.03]"
           src="logo.svg"
-          height={96}
-          width={192}
+          height={64}
+          width={128}
           alt="logo"
         />
       </Link>

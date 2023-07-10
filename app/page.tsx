@@ -1,5 +1,5 @@
-import { Product } from "@/components";
-import fetchProduct from "@/components/fetchProduct";
+import { Product } from "@/app/(components)";
+import fetchProduct from "@/app/(components)/fetchProduct";
 import { ProductProps } from "@/types/indes";
 
 export default async function Home() {

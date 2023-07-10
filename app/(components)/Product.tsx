@@ -3,10 +3,11 @@ import { Tab } from "@headlessui/react";
 import { ProductProps } from "@/types/indes";
 import Image from "next/image";
 import { Fragment } from "react";
+import { BuyButton } from ".";
 
-const Product = ({ name, desc, price, files }: ProductProps) => {
+const Product = ({ name, desc, price, files, url }: ProductProps) => {
   return (
-    <div className="grid grid-cols-1 w-full lg:grid-cols-2 max-w-[64rem] mx-auto mb-4 outline outline-black bg-white">
+    <div className="grid grid-cols-1 w-full md:grid-cols-2 max-w-[64rem] mx-auto mb-4 outline outline-gray-600 bg-white">
       <Tab.Group>
         <div className="">
           <Tab.Panels className="flex justify-center">
@@ -28,7 +29,6 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
                 {({ selected }) => (
                   <Image
                     src={`/images/${img}`}
-                    objectFit="responsive"
                     height={96}
                     width={96}
                     alt={img}
@@ -44,19 +44,13 @@ const Product = ({ name, desc, price, files }: ProductProps) => {
           </Tab.List>
         </div>
         <div className="m-2 flex flex-col justify-between">
-          <div className="flex flex-col gap-3 pt-4 pl-2">
+          <div className="flex flex-col gap-1 pt-4 pl-2">
             <h1 className="text-4xl">{name}</h1>
             <p className="pt-6 text-xl">{desc}</p>
             <p className="pt-8 text-6xl text-purple-300">{price}</p>
           </div>
 
-          <button
-            className="py-4 mb-2 font-bold text-xl border-none bg-blue-300 rounded text-white
-            transition duration-300 hover:bg-blue-400 hover:scale-[1.01] hover:drop-shadow-sm
-            "
-          >
-            Add to Cart
-          </button>
+          <BuyButton url={url} />
         </div>
       </Tab.Group>
     </div>
