@@ -50,7 +50,7 @@ const Product = ({ name, desc, price, files, url }: ProductProps) => {
             <p className="pt-8 text-6xl text-purple-300">{price}</p>
           </div>
 
-          <BuyButton url={url} />
+          <BuyButton url={url} price={price} />
         </div>
       </Tab.Group>
     </div>

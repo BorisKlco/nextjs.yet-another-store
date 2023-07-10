@@ -1,17 +1,23 @@
 "use client";
 
+import { useCartContext } from "../(context)/cartContext";
+
 type BuyButtonProp = {
   url: string;
+  price: number;
 };
 
-const handleBuyButton = (id: string) => {
-  console.log(id);
-};
+const BuyButton = ({ url, price }: BuyButtonProp) => {
+  const { cart, addProduct } = useCartContext();
+  const product = url;
+  const addItem = () => {
+    addProduct({ product });
+    console.log(cart);
+  };
 
-const BuyButton = ({ url }: BuyButtonProp) => {
   return (
     <button
-      onClick={() => handleBuyButton(url)}
+      onClick={addItem}
       className="py-4 mb-2 font-bold text-xl border-none bg-blue-300 rounded text-white
             transition duration-300 hover:bg-blue-400 hover:scale-[1.01] hover:drop-shadow-sm
             "
