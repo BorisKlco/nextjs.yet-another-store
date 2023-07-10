@@ -10,7 +10,17 @@ type CartContextProviderSate = {
 const CartContextProvider = ({ children }: CartContextProviderSate) => {
   const [cart, setCart] = useState<ProductState[]>([]);
   const addProduct = (product: ProductState) => {
-    return setCart([...cart, product]);
+    cart.map((mapItem) => {
+      if (mapItem.product === product.product) {
+        product = { product: mapItem.product, count: mapItem.count + 1 };
+        const updated = cart.filter((filteredItem) => {
+          filteredItem.product != mapItem.product;
+        });
+
+        return setCart([...updated, product]);
+      }
+    });
+    setCart([...cart, product]);
   };
 
   return (

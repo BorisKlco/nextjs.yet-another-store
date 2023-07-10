@@ -11,8 +11,7 @@ const BuyButton = ({ url, price }: BuyButtonProp) => {
   const { cart, addProduct } = useCartContext();
   const product = url;
   const addItem = () => {
-    addProduct({ product });
-    console.log(cart);
+    addProduct({ product, count: 1 });
   };
 
   return (

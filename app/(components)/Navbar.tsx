@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { BsBag, BsPerson } from "react-icons/bs";
+import Cart from "./Cart";
 
 const Navbar = () => {
   return (
@@ -17,12 +18,7 @@ const Navbar = () => {
       <nav>
         <ul className="flex 2xl:text-2xl text-sm items-center">
           <li className="flex px-4 h-12 border-r align-middle">
-            <Link
-              href="/"
-              className="flex items-center gap-2 transition duration-100 hover:text-fuchsia-600 hover:scale-[1.05]"
-            >
-              <BsBag /> Cart
-            </Link>
+            <Cart />
           </li>
           <li className="px-4">
             <Link

@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 export type ProductState = {
   product: string;
-  count?: number;
+  count: number;
 };
 
 type CartState = {

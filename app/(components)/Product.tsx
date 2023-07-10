@@ -4,6 +4,7 @@ import { ProductProps } from "@/types/indes";
 import Image from "next/image";
 import { Fragment } from "react";
 import { BuyButton } from ".";
+import Cart from "./Cart";
 
 const Product = ({ name, desc, price, files, url }: ProductProps) => {
   return (
